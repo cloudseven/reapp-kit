@@ -2,7 +2,6 @@ var React = require('react');
 var RoutedViewListMixin = require('reapp-routes/react-router/RoutedViewListMixin');
 var Components = require('reapp-ui/all');
 var theme = require('./theme');
-var action = require('./action');
 var ContextTypes = require('./ContextTypes');
 
 module.exports = function(opts, Component) {
@@ -22,8 +21,7 @@ module.exports = function(opts, Component) {
 
       getChildContext: function() {
         return {
-          theme: theme(),
-          action: action
+          theme: theme()
         };
       },
 
